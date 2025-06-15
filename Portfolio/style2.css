@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Edu NSW ACT Cursive", cursive;
+}
+.portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+  display: flex;
+}
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    /* background-color: rgb(222, 205, 205); */
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.navlist li{
+    list-style: none;
+
+}
+.navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #FFF;
+    position: relative;
+}
+.left-container,.right-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left-container{
+background: #262525;
+width: 70%;
+padding-left: 3rem;
+}
+.right-container{
+background: linear-gradient(-45deg, #3877ff,#262525 70%);
+width: 30%;
+}
+.icons .fa-brands{
+    color: #f0eded;
+     font-size: 1.7rem;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 3rem;
+}
+.content{
+    margin-left: 4rem;
+}
+.content .intro{
+    color: #5D9BEE;}
+.content .intro span{
+    color: #e0222f;
+}
+.content h2{
+    font-size: 1.5rem;
+}
+.content h1{
+    font-size: 4rem;
+    color: #5db9ee;
+}
+.content .detail{
+    font-size: 1.1rem;
+    color: #f0eded;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0 ;
+    line-height: 1.8rem;
+}
+.btn-container button{
+    border: .1rem solid #5D9BEE;
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+button:nth-child(1){
+    background: #5D9BEE;
+}
+button:nth-child(2){
+    background: transparent;
+    margin-left: 2rem;
+}
+button:nth-child(1):hover{
+    background: transparent;
+    color:red;
+}
+button:nth-child(2):hover{
+    background: transparent;
+    color:red;
+}
+.icons .fa-brands:hover{
+    cursor: pointer;
+    background: linear-gradient(#FFF,#3877ff);
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;
+
+}
+.design .circle{
+aspect-ratio: 1;
+position: absolute;
+border-radius: 50%;  /*to make circle*/
+top:50%;
+left: 70%;
+transform: translate(-50%,-50%);  /* for x and y axis to centre*/
+}
+.circle:nth-child(1){
+    background: linear-gradient(90deg, transparent 50%,#262525 50%);
+  width: 38rem;
+}
+.circle:nth-child(2){
+    /* background: #f4f2f2; */
+    width: 30rem;
+    background-image: url("my_photo.jpg");
+    /* background-size: 100%; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1rem solid #FFF;
+    box-shadow: 0 0 1rem #FFF,
+    inset 0 0 1rem #FFF,
+    0 0 2rem #3877ff,  /* 0 0 means for x and y axis*/
+    inset 0 0 2rem #3877ff,
+    0 0 4rem #3877ff,
+    inset 0 0 4rem #3877ff ;
+}
+.navlist li a::after, .navlist .active::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: #FFF;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+} 
+.navlist li a:hover::after,.navlist .active::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
